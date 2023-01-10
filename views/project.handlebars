@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h2 class="user-id" id="{{user_id}}">{{name}}</h2>
+  <span class="project-id" id="{{id}}"></span>
+  <span class="user-name" id="{{user_name}}"
+  {{!-- added --}}
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  {{#if logged_in}}
+     <form class="form new-comment-form">
+        <div class="form-group">
+          <label for="comment-text">Comment</label>
+          <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Post comment</button>
+        </div>
+     </form>
+    <script src="/js/comments.js"></script>
+  {{/if}}
+  <h2>Comments left by Users</h2>
+  {{#each comments as |comment|}}
+  <div class="comment-box">
+    <p>{{user_name}} says: {{comment.message}}</p>
+  </div>
+  
+  {{/each}}
+  {{!--Comment section here --}}
+</div>
