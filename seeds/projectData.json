@@ -1,0 +1,14 @@
+[
+  {
+    "name": "My first post",
+    "description": "Is this working?"
+  },
+  {
+    "name": "Help",
+    "description": "How do I get the names to work?"
+  },
+  {
+    "name": "Favorite Food",
+    "description": "Brisket"
+  }
+]
